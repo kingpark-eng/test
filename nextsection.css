@@ -1,0 +1,93 @@
+/* 섹션 공통 스타일 */
+.content-section {
+    min-height: 100vh;
+    padding: 100px 50px;
+    background-color: #0d1117; /* 깊은 다크 배경 */
+    color: #c9d1d9;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #58a6ff; /* 푸른색 강조 */
+    margin-bottom: 30px;
+}
+
+.terminal-prompt {
+    color: #238636; /* 그린 프롬프트 */
+}
+
+/* 기술 스택 스타일 */
+.skills-grid {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.skill-category h4 {
+    color: #ff7b72; /* 카테고리 색상 */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #30363d;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    padding: 5px 0;
+    font-size: 1rem;
+}
+
+.skill-category li::before {
+    content: "• ";
+    color: #238636;
+}
+
+/* 프로젝트 카드 스타일 */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    padding: 25px;
+    border-radius: 6px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateX(10px);
+    border-color: #58a6ff;
+}
+
+.project-date {
+    font-size: 0.8rem;
+    color: #8b949e;
+}
+
+.project-name {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    color: #f0f6fc;
+}
+
+.project-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.project-tags {
+    font-size: 0.9rem;
+    color: #58a6ff;
+    font-weight: bold;
+}

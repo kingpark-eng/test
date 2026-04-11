@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 | 박종환</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="nextsection.css">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <a href="#" target="_blank">Velog</a>
+        <a href="#" target="_blank">Github</a>
+    </nav>
+    <div class="full-page-container">
+    <section class="hero-section">
+        <div class="text-group">
+            <h1 class="bg-text">Back-End</h1>
+            <h2 class="main-title">백엔드 개발자 <strong>박종환</strong>입니다.</h2>
+            <p class="sub-title">
+                사용자를 생각하는 역지사지 마인드,<br>
+                포기하지 않고 책임감 있게 일하는 개발자입니다.
+            </p>
+        </div>
+        <button class="next-btn-down" onclick="scrollToNext()">
+                <span class="arrow-text-down">Next Section</span>
+                <span class="arrow-icon-down">↓</span>
+        </button>
+        <div class="profile-image-container">
+            <img src="profile.jpg" alt="박종환 프로필 사진" class="profile-img">
+        </div>
+
+        <div class="scroll-down">
+            <span>∨</span>
+            <span>∨</span>
+        </div>
+    </section>
+
+    <footer class="bottom-info">
+        <p>qkr12294@gmail.com</p>
+        <p>update. 26. 04. 11</p>
+    </footer>
+
+    <button class="scroll-top-btn">^</button>
+
+    <section id="next-section" class="content-section">
+        <div class="container">
+            <div class="skills-wrapper">
+                <h3 class="section-title"><span class="terminal-prompt">$</span> cat skills.json</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Backend</h4>
+                        <ul>
+                            <li>Java / Spring Boot</li>
+                            <li>MySQL / PostgreSQL</li>
+                            <li>Redis</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>DevOps</h4>
+                        <ul>
+                            <li>Docker / Kubernetes</li>
+                            <li>AWS (EC2, S3)</li>
+                            <li>Jenkins (CI/CD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-wrapper">
+                <h3 class="section-title"><span class="terminal-prompt">$</span> ls -al projects/</h3>
+                <div class="project-list">
+                    <div class="project-card">
+                        <span class="project-date">2023.08 - 2023.10</span>
+                        <h4 class="project-name">E-Commerce API Optimization</h4>
+                        <p class="project-desc">대규모 트래픽 처리를 위한 주문 시스템 성능 개선 및 DB 인덱싱 최적화</p>
+                        <div class="project-tags">#Spring_Boot #JPA #MySQL</div>
+                    </div>
+                    <div class="project-card">
+                        <span class="project-date">2023.05 - 2023.07</span>
+                        <h4 class="project-name">Real-time Chatting Server</h4>
+                        <p class="project-desc">WebSocket과 Redis Pub/Sub을 활용한 확장성 있는 채팅 서버 구축</p>
+                        <div class="project-tags">#WebSocket #Redis #Java</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <script>
+        const container = document.querySelector('.full-page-container');
+        let isScrolling = false;
+
+        container.addEventListener('wheel', (e) => {
+            // 이미 애니메이션 중이면 중복 실행 방지
+            if (isScrolling) return;
+
+            e.preventDefault(); // 기본 스크롤 동작 방지
+
+            if (e.deltaY > 0) {
+                // 휠을 내릴 때 (다음 섹션으로)
+                container.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+            } else {
+                // 휠을 올릴 때 (이전 섹션으로)
+                container.scrollBy({ top: -window.innerHeight, behavior: 'smooth' });
+            }
+
+            isScrolling = true;
+            setTimeout(() => {
+                isScrolling = false;
+            }, 800); // 애니메이션이 끝날 때까지 대기 (CSS transition 시간과 맞춤)
+        }, { passive: false });
+        
+        
+        function scrollToNext() {
+                // 전체를 감싸고 있는 컨테이너를 찾습니다.
+            const container = document.querySelector('.full-page-container');
+                container.scrollBy({
+                    top: window.innerHeight,
+                    behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
