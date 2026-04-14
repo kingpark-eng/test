@@ -6,6 +6,7 @@
     <title>포트폴리오 | 박종환</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="nextsection.css">
+    <link rel="stylesheet" href="nextsection2.css">
 </head>
 <body>
 
@@ -14,7 +15,7 @@
         <a href="#" target="_blank">Github</a>
     </nav>
     <div class="full-page-container">
-    <section class="hero-section">
+    <section class="section hero-section">
         <div class="text-group">
             <h1 class="bg-text">Back-End</h1>
             <h2 class="main-title">백엔드 개발자 <strong>박종환</strong>입니다.</h2>
@@ -36,15 +37,8 @@
             <span>∨</span>
         </div>
     </section>
-
-    <footer class="bottom-info">
-        <p>qkr12294@gmail.com</p>
-        <p>update. 26. 04. 11</p>
-    </footer>
-
-    <button class="scroll-top-btn">^</button>
-
-    <section id="next-section" class="content-section">
+ 
+    <section id="next-section" class="section content-section">
         <div class="container">
             <div class="skills-wrapper">
                 <h3 class="section-title"><span class="terminal-prompt">$</span> cat skills.json</h3>
@@ -72,53 +66,153 @@
                 <h3 class="section-title"><span class="terminal-prompt">$</span> ls -al projects/</h3>
                 <div class="project-list">
                     <div class="project-card">
-                        <span class="project-date">2023.08 - 2023.10</span>
-                        <h4 class="project-name">E-Commerce API Optimization</h4>
-                        <p class="project-desc">대규모 트래픽 처리를 위한 주문 시스템 성능 개선 및 DB 인덱싱 최적화</p>
-                        <div class="project-tags">#Spring_Boot #JPA #MySQL</div>
+                        <span class="project-date">2024.06 - 현재</span>
+                        <h4 class="project-name">2025년 디지털정부인증서비스</h4>
+                        <p class="project-desc">400개 기관 서비스에 대한 기술지원(인프라, SDK 적용방법) 및 개발서버 구축</p>
+                        <div class="project-tags">#Spring_Boot #EgovFramework #Java #Vue #React</div>
                     </div>
                     <div class="project-card">
-                        <span class="project-date">2023.05 - 2023.07</span>
-                        <h4 class="project-name">Real-time Chatting Server</h4>
-                        <p class="project-desc">WebSocket과 Redis Pub/Sub을 활용한 확장성 있는 채팅 서버 구축</p>
-                        <div class="project-tags">#WebSocket #Redis #Java</div>
+                        <span class="project-date">2021.11 - 2024.05</span>
+                        <h4 class="project-name">차세대 지방세입정보시스템 구축 2단계 사업</h4>
+                        <p class="project-desc">세외수입 파트에서 고지서, 체납, 번호판 영치 업무 개발 및 연계</p>
+                        <div class="project-tags">#Java #Jenkins #EgovFramework</div>
+                    </div>
+                    <div class="project-card">
+                        <span class="project-date">2021.11 - 2024.05</span>
+                        <h4 class="project-name">차세대 지방세입정보시스템 구축 2단계 사업</h4>
+                        <p class="project-desc">세외수입 파트에서 고지서, 체납, 번호판 영치 업무 개발 및 연계</p>
+                        <div class="project-tags">#Java #Jenkins #EgovFramework</div>
+                    </div>
+                    <div class="project-card">
+                        <span class="project-date">2021.11 - 2024.05</span>
+                        <h4 class="project-name">차세대 지방세입정보시스템 구축 2단계 사업</h4>
+                        <p class="project-desc">세외수입 파트에서 고지서, 체납, 번호판 영치 업무 개발 및 연계</p>
+                        <div class="project-tags">#Java #Jenkins #EgovFramework</div>
+                    </div>
+                    <div class="project-card">
+                        <span class="project-date">2021.11 - 2024.05</span>
+                        <h4 class="project-name">차세대 지방세입정보시스템 구축 2단계 사업</h4>
+                        <p class="project-desc">세외수입 파트에서 고지서, 체납, 번호판 영치 업무 개발 및 연계</p>
+                        <div class="project-tags">#Java #Jenkins #EgovFramework</div>
+                    </div>
+                    <div class="project-card">
+                        <span class="project-date">2021.11 - 2024.05</span>
+                        <h4 class="project-name">차세대 지방세입정보시스템 구축 2단계 사업</h4>
+                        <p class="project-desc">세외수입 파트에서 고지서, 체납, 번호판 영치 업무 개발 및 연계</p>
+                        <div class="project-tags">#Java #Jenkins #EgovFramework</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="trouble-shooting" class="section content-section">
+        <div class="container">
+            <h3 class="section-title"><span class="terminal-prompt">$</span> tail -f issue_log.txt</h3>
+            
+            <div class="log-container">
+                <div class="log-card">
+                    <div class="log-header">
+                        <span class="status-badge">SOLVED</span>
+                        <span class="log-title">공공 API 연계 데이터 동기화 지연 해결</span>
+                    </div>
+                    <div class="log-body">
+                        <p><strong>Issue:</strong> 400개 기관 데이터 수신 시 간헐적 타임아웃 발생</p>
+                        <p><strong>Analysis:</strong> 동기 방식의 호출로 인한 쓰레드 병목 현상 확인</p>
+                        <p><strong>Action:</strong> WebClient 비동기 처리 및 메시지 큐(Redis) 도입</p>
+                    </div>
+                </div>
+            </div>
+            <div class="log-container">
+                <div class="log-card">
+                    <div class="log-header">
+                        <span class="status-badge">SOLVED</span>
+                        <span class="log-title">공공 API 연계 데이터 동기화 지연 해결</span>
+                    </div>
+                    <div class="log-body">
+                        <p><strong>Issue:</strong> 400개 기관 데이터 수신 시 간헐적 타임아웃 발생</p>
+                        <p><strong>Analysis:</strong> 동기 방식의 호출로 인한 쓰레드 병목 현상 확인</p>
+                        <p><strong>Action:</strong> WebClient 비동기 처리 및 메시지 큐(Redis) 도입</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bottom-info">
+        <p>qkr12294@gmail.com</p>
+        <p>update. 26. 04. 11</p>
+    </footer>
+    <button class="scroll-top-btn">^</button>
+
     </div>
     <script>
         const container = document.querySelector('.full-page-container');
+        const sections = document.querySelectorAll('.section');
+        let currentSection = 0; // 현재 보고 있는 섹션 번호 (0부터 시작)
         let isScrolling = false;
 
         container.addEventListener('wheel', (e) => {
-            // 이미 애니메이션 중이면 중복 실행 방지
             if (isScrolling) return;
 
-            e.preventDefault(); // 기본 스크롤 동작 방지
+            const currentSectionEl = sections[currentSection];
+            // 현재 섹션의 내부 스크롤 위치 확인
+            const isAtBottom = currentSectionEl.scrollHeight - currentSectionEl.scrollTop <= currentSectionEl.clientHeight + 1;
+            const isAtTop = currentSectionEl.scrollTop === 0;
 
             if (e.deltaY > 0) {
-                // 휠을 내릴 때 (다음 섹션으로)
-                container.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+                // 내릴 때: 내부 스크롤이 끝까지 내려갔을 때만 다음 섹션으로
+                if (isAtBottom) {
+                    e.preventDefault();
+                    const nextSection = currentSection + 1;
+                    if (nextSection < sections.length) {
+                        currentSection = nextSection;
+                        scrollToSection(currentSection);
+                    }
+                }
+                // 끝이 아니면 기본 브라우저 스크롤(내부 스크롤) 작동
             } else {
-                // 휠을 올릴 때 (이전 섹션으로)
-                container.scrollBy({ top: -window.innerHeight, behavior: 'smooth' });
+                // 올릴 때: 내부 스크롤이 맨 위일 때만 이전 섹션으로
+                if (isAtTop) {
+                    e.preventDefault();
+                    const prevSection = currentSection - 1;
+                    if (prevSection >= 0) {
+                        currentSection = prevSection;
+                        scrollToSection(currentSection);
+                    }
+                }
             }
+        }, { passive: false });
 
+        // 특정 섹션으로 부드럽게 이동하는 함수
+        function scrollToSection(index) {
             isScrolling = true;
+            
+            container.scrollTo({
+                top: index * window.innerHeight,
+                behavior: 'smooth'
+            });
+
+            // 애니메이션이 끝날 때까지 휠 입력 잠금 (0.8초)
             setTimeout(() => {
                 isScrolling = false;
-            }, 800); // 애니메이션이 끝날 때까지 대기 (CSS transition 시간과 맞춤)
-        }, { passive: false });
-        
-        
+            }, 800);
+        }
+
+        // "Next Section" 버튼 클릭 시에도 인덱스 기반으로 이동
         function scrollToNext() {
-                // 전체를 감싸고 있는 컨테이너를 찾습니다.
-            const container = document.querySelector('.full-page-container');
-                container.scrollBy({
-                    top: window.innerHeight,
-                    behavior: 'smooth'
+            if (currentSection < sections.length - 1) {
+                currentSection++;
+                scrollToSection(currentSection);
+            }
+        }
+
+        // (선택) 상단으로 가기 버튼 클릭 시
+        const topBtn = document.querySelector('.scroll-top-btn');
+        if(topBtn) {
+            topBtn.addEventListener('click', () => {
+                currentSection = 0;
+                scrollToSection(0);
             });
         }
     </script>
